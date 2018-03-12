@@ -1,83 +1,28 @@
-Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Entry module not found: Error: Can't resolve '/Users/Guest/Desktop/journal/src  /index.html' in '/Users/Guest/Desktop/journal':
-  Error: Can't resolve '/Users/Guest/Desktop/journal/src/index.html' in '/Users/  Guest/Desktop/journal'
-  
-  - compiler.js:73 childCompiler.runAsChild
-    [journal]/[html-webpack-plugin]/lib/compiler.js:73:16
-  
-  - Compiler.js:222 compile
-    [journal]/[webpack]/lib/Compiler.js:222:11
-  
-  - Compiler.js:470 hooks.afterCompile.callAsync.err
-    [journal]/[webpack]/lib/Compiler.js:470:14
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [journal]/[tapable]/lib/Hook.js:35:21
-  
-  - Compiler.js:467 compilation.seal.err
-    [journal]/[webpack]/lib/Compiler.js:467:30
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [journal]/[tapable]/lib/Hook.js:35:21
-  
-  - Compilation.js:957 hooks.optimizeAssets.callAsync.err
-    [journal]/[webpack]/lib/Compilation.js:957:35
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [journal]/[tapable]/lib/Hook.js:35:21
-  
-  - Compilation.js:948 hooks.optimizeChunkAssets.callAsync.err
-    [journal]/[webpack]/lib/Compilation.js:948:32
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [journal]/[tapable]/lib/Hook.js:35:21
-  
-  - Compilation.js:943 hooks.additionalAssets.callAsync.err
-    [journal]/[webpack]/lib/Compilation.js:943:36
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [journal]/[tapable]/lib/Hook.js:35:21
-  
-  - Compilation.js:939 hooks.optimizeTree.callAsync.err
-    [journal]/[webpack]/lib/Compilation.js:939:32
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [journal]/[tapable]/lib/Hook.js:35:21
-  
-  - Compilation.js:881 Compilation.seal
-    [journal]/[webpack]/lib/Compilation.js:881:27
-  
-  - Compiler.js:464 hooks.make.callAsync.err
-    [journal]/[webpack]/lib/Compiler.js:464:17
-  
-  
-  - Compilation.js:749 _addModuleChain
-    [journal]/[webpack]/lib/Compilation.js:749:12
-  
-  - Compilation.js:628 errorAndCallback.bail.err
-    [journal]/[webpack]/lib/Compilation.js:628:6
-  
-  - Compilation.js:661 moduleFactory.create
-    [journal]/[webpack]/lib/Compilation.js:661:14
-  
-  - NormalModuleFactory.js:358 factory
-    [journal]/[webpack]/lib/NormalModuleFactory.js:358:22
-  
-  - NormalModuleFactory.js:118 resolver
-    [journal]/[webpack]/lib/NormalModuleFactory.js:118:21
-  
-  - NormalModuleFactory.js:198 asyncLib.parallel
-    [journal]/[webpack]/lib/NormalModuleFactory.js:198:22
-  
-  - async.js:2772 
-    [journal]/[neo-async]/async.js:2772:7
-  
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Journal</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Journal:</h1>
+      <form id="entryForm">
+        <label for="title">Post Title:</label>
+        <input id="title" type="text" name="title">
+        <label for="body">Entry:</label>
+        <input id="body" type="text" name="body">
+        <button type="submit" name="button">Submit</button>
+      </form>
+
+      <h3 id="titleResult"></h3>
+      <h5 id="bodyResult"></h5>
+      <hr>
+      <h5 >This sentence contains <span id="wordCountResult"></span> words.</h5>
+      <h5 >This sentence contains <span id="vowelCountResult"> </span> vowels.</h5>
+      <h5 >This sentence contains <span id="consonantCountResult"> </span> consonants.</h5>
+    </div>
+  </body>
+</html>
+
 </pre><script type="text/javascript" src="bundle.js"></script>
